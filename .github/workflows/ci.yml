@@ -25,6 +25,8 @@ jobs:
       - name: Generate streak stats card
         run: |
           emacs --batch -L emacstreak -l emacstreak/emacstreak.el --eval '(emacstreak-save-svg "iquiw" "emacsstreak.svg")'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit cards
         run: |
