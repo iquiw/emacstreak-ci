@@ -12,6 +12,10 @@ jobs:
       contents: write
 
     steps:
+      # Checkout self repository
+      - uses: actions/checkout@v6
+
+      # Checkout Emacstreak repository
       - uses: actions/checkout@v6
         with:
           repository: iquiw/emacstreak
